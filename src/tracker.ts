@@ -65,8 +65,10 @@ export function getAllWorkoutsByType(userId: string, type: string): Workout[] {
   return filteredWorkouts;
 }
 
-export function getUsers(): User[] {
-  return Array.from(users.values());
+export function getUsers(): User[]
+{
+  const userArray: User[] = Array.from(users.values());
+  return userArray;
 }
 
 export function getUser(id: string): User {

@@ -1,4 +1,3 @@
-import { log } from 'console';
 import { 
     addUser,logWorkout,getAllWorkoutsOf,getAllWorkoutsByType,getUsers,getUser,updateUser } from './tracker';
 
@@ -15,7 +14,8 @@ logWorkout("U002", { type: "gym", duration: 45, caloriesBurned: 150, date: new D
 
 console.log(getUser("U003")); 
 
-console.log(getUsers()); 
+const user = getUsers(); 
+console.log(JSON.stringify(user, null, 2));
 
 console.log(getAllWorkoutsOf("U003")); 
 
